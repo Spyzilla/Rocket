@@ -102,7 +102,7 @@ class Star
 	{
 		this.x = random(0, width);
 		this.y = 0;
-		this.vel = random(0.5, 5);
+		this.vel = random(0.2, 3.5);
 	}
 
 	show()

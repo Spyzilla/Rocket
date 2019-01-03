@@ -4,28 +4,29 @@
     <script src="sketch.js"></script>
   <style type="text/css">
   body {
-                background: linear-gradient(360deg,#000000, #00060a, #00141f, #072948, #226aa9, #2c8ce2, #afd4f4);
+                background: linear-gradient(360deg,#00060a, #00141f, #072948, #226aa9, #2c8ce2, #afd4f4);
 background-size: 1000% 1000%;
 
--webkit-animation: AnimationName 40s ease-in-out;
--moz-animation: AnimationName 40s ease-in-out;
-animation: AnimationName 40s ease-in-out;
-    animation-iteration-count: 1;
+-webkit-animation: Gradient 40s ease-in 1 forwards;
+-moz-animation: Gradient 40s ease-in 1 forwards;
+animation: Gradient 40s ease-in 1 forwards;
+animation-fill-mode: forwards;
+animation-iteration-count: 1;
 }
-@-webkit-keyframes AnimationName {
+@-webkit-keyframes Gradient {
     0%{background-position:52% 0%}
     50%{background-position:49% 100%}
-    100%{background-position:52% 0%}
+    100%{background-position:52% 100%}
 }
-@-moz-keyframes AnimationName {
+@-moz-keyframes Gradient {
     0%{background-position:52% 0%}
     50%{background-position:49% 100%}
-    100%{background-position:52% 0%}
+    100%{background-position:52% 100%}
 }
-@keyframes AnimationName { 
+@keyframes Gradient { 
     0%{background-position:52% 0%}
     50%{background-position:49% 100%}
-    100%{background-position:52% 0%}
+    100%{background-position:52% 100%}
 }
         </head>
   <body>

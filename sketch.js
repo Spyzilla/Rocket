@@ -55,7 +55,7 @@ class Particle
 		this.y1 = 470;
 		this.x2 = width/2 - 29;
 		this.y2 = 470;
-
+		this.size = random(14, 16)
 		this.velx1 = random(-0.5, 0.5);
 		this.vely1 = random(3, 7);
 		this.velx2 = random(-0.5, 0.5);
@@ -66,8 +66,8 @@ class Particle
 	show() {
 		fill(random(175, 200), this.alpha);
 		noStroke();
-		ellipse(this.x1, this.y1, random(14, 16), random(14, 16));
-		ellipse(this.x2, this.y2, random(14, 16), random(14, 16));
+		ellipse(this.x1, this.y1, this.size);
+		ellipse(this.x2, this.y2, this.size);
 	}
 
 	finished() {
@@ -79,7 +79,8 @@ class Particle
 		this.y1 += this.vely1;
 		this.x2 += this.velx2;
 		this.y2 += this.vely2;
-		this.alpha -= random(3, 6);
+		this.alpha -= random(2, 4);
+		this.size += 0.3;
 	}
 }
 
@@ -102,18 +103,36 @@ class Star
 	{
 		this.x = random(0, width);
 		this.y = 0;
+<<<<<<< HEAD
+		this.vel = random(0.2, 3);
+		this.size = this.vel/(random(1, 4));
+=======
 		this.vel = random(0.2, 3.5);
+>>>>>>> bad41cce57da0b004446316fcecdcfa2b7575b82
 	}
 
 	show()
 	{
+<<<<<<< HEAD
+		noStroke();
+		fill(random(200, 255));
+		if (this.size > .9)
+		{
+			ellipse(this.x, this.y, this.size);
+		}
+=======
 		fill(random(200, 255));
 		ellipse(this.x, this.y, (this.vel/(random(1, 4))));
+>>>>>>> bad41cce57da0b004446316fcecdcfa2b7575b82
 	}
 
 	finished() 
 	{
+<<<<<<< HEAD
+		return (this.y > height || this.x < 0 || this.x > windowWidth);
+=======
 		return this.y > height;
+>>>>>>> bad41cce57da0b004446316fcecdcfa2b7575b82
 	}
 
 	update()
@@ -140,4 +159,8 @@ function createStars()
 				stars.splice(i, 1);
 			}
 		}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> bad41cce57da0b004446316fcecdcfa2b7575b82

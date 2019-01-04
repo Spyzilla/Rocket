@@ -79,7 +79,7 @@ class Particle
 		this.y1 += this.vely1;
 		this.x2 += this.velx2;
 		this.y2 += this.vely2;
-		this.alpha -= random(2, 4);
+		this.alpha -= random(4, 6);
 		this.size += 0.3;
 	}
 }
